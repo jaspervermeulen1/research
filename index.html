@@ -243,7 +243,7 @@
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 10px;
       margin-top: 1.75rem;
     }
@@ -387,11 +387,6 @@
       color: var(--award-text);
     }
 
-    .badge-review {
-      background: var(--bg3);
-      color: var(--text3);
-    }
-
     .badge-year {
       font-size: 11px;
       font-weight: 400;
@@ -422,7 +417,7 @@
       white-space: nowrap;
       font-weight: 400;
       padding-top: 2px;
-      min-width: 40px;
+      min-width: 82px;
     }
 
     .service-body { flex: 1; }
@@ -529,6 +524,16 @@
         flex-direction: row;
         align-items: center;
       }
+
+      .service-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+      }
+
+      .service-year {
+        min-width: 0;
+      }
     }
   </style>
 </head>
@@ -542,7 +547,10 @@
     <ul class="nav-links">
       <li><a href="#research">Research</a></li>
       <li><a href="#publications">Publications</a></li>
+      <li><a href="#awards">Awards</a></li>
       <li><a href="#service">Service</a></li>
+      <li><a href="#talks">Talks</a></li>
+      <li><a href="#media">Media</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -552,17 +560,19 @@
       <p class="hero-eyebrow">PhD Candidate · Queensland University of Technology</p>
       <h1 class="hero-title">How do teams work <em>with</em> and <em>around</em> robots?</h1>
 
-     <p class="hero-tagline">
-I study how people coordinate around robotic systems in real-world environments. Through embedded qualitative research, I investigate the gap between how human-robot collaboration is designed and how it unfolds in practice.
-</p>
+      <p class="hero-tagline">
+        I study how people coordinate around robotic systems in real-world environments. Through embedded qualitative research, I investigate the gap between how human-robot collaboration is designed and how it unfolds in practice.
+      </p>
 
       <div class="hero-ctas">
         <a class="btn btn-primary" href="https://scholar.google.com/citations?user=7XGYPm0AAAAJ&hl=en" target="_blank" rel="noopener">
           <i class="ti ti-brand-google"></i> Google Scholar
         </a>
+
         <a class="btn" href="https://www.linkedin.com/in/jaspervermeulenphdroboticssurgery/" target="_blank" rel="noopener">
           <i class="ti ti-brand-linkedin"></i> LinkedIn
         </a>
+
         <a class="btn" href="#contact">
           <i class="ti ti-mail"></i> Get in touch
         </a>
@@ -588,27 +598,31 @@ I study how people coordinate around robotic systems in real-world environments.
     </div>
   </section>
 
- <p class="about-text">
-I am a final-year PhD candidate at the Queensland University of Technology (QUT) and the Australian Cobotics Centre. My research investigates human-robot collaboration in high-stakes environments, with a particular focus on robotic surgery and multi-actor teamwork around robotic systems.
-</p>
+  <section id="about">
+    <p class="section-label">About</p>
 
-<p class="about-text">
-Using ethnographic fieldwork, interviews, and video-based analysis, I examine how robotic systems reshape coordination, communication, expertise, and human work in practice. My doctoral research draws on more than 100 hours of fieldwork across observations, video analysis, and interviews conducted across Australian surgical contexts.
-</p>
+    <p class="about-text">
+      I am a final-year PhD candidate at the Queensland University of Technology (QUT) and the Australian Cobotics Centre. My research investigates human-robot collaboration in high-stakes environments, with a particular focus on robotic surgery and multi-actor teamwork around robotic systems.
+    </p>
 
-<p class="about-text">
-My methodological foundation is Socio-Technical Grounded Theory (STGT). My thesis introduces the 3T Framework for HRC Teamwork, a transferable sociotechnical framework structured around Team, Tempo, and Task dimensions.
-</p>
+    <p class="about-text">
+      Using ethnographic fieldwork, interviews, and video-based analysis, I examine how robotic systems reshape coordination, communication, expertise, and human work in practice. My doctoral research draws on more than 100 hours of fieldwork across observations, video analysis, and interviews conducted across Australian surgical contexts.
+    </p>
 
-<p class="about-text">
-Before joining QUT, I completed degrees in Human-Media Interaction and Communication &amp; Media at Erasmus University Rotterdam, where I also taught qualitative methods and emerging media technologies.
-</p>
+    <p class="about-text">
+      My methodological foundation is Socio-Technical Grounded Theory (STGT). My thesis introduces the 3T Framework for HRC Teamwork, a transferable sociotechnical framework structured around Team, Tempo, and Task dimensions.
+    </p>
+
+    <p class="about-text">
+      Before joining QUT, I completed degrees in Human-Media Interaction and Communication &amp; Media at Erasmus University Rotterdam, where I also taught qualitative methods and emerging media technologies.
+    </p>
 
     <div class="stats">
       <div class="stat">
         <div class="stat-num">100+</div>
         <div class="stat-label">Hours of fieldwork</div>
       </div>
+
       <div class="stat">
         <div class="stat-num">23+</div>
         <div class="stat-label">Surgical observations</div>
@@ -647,7 +661,7 @@ Before joining QUT, I completed degrees in Human-Media Interaction and Communica
   </section>
 
   <section id="publications">
-    <p class="section-label">Select Publications</p>
+    <p class="section-label">Selected publications</p>
 
     <div class="pub-list">
       <div class="pub-item">
@@ -663,6 +677,7 @@ Before joining QUT, I completed degrees in Human-Media Interaction and Communica
             <a class="pub-link" href="https://doi.org/10.1145/3772318.3791382" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> DOI</a>
           </div>
         </div>
+
         <div class="pub-badges">
           <span class="badge badge-award">🏅 Honourable Mention</span>
           <span class="badge-year">2026</span>
@@ -682,7 +697,8 @@ Before joining QUT, I completed degrees in Human-Media Interaction and Communica
             <a class="pub-link" href="https://doi.org/10.1145/3800645.3812924" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> DOI</a>
           </div>
         </div>
-       <div class="pub-badges">
+
+        <div class="pub-badges">
           <span class="badge badge-award">🏅 Honourable Mention</span>
           <span class="badge-year">2026</span>
         </div>
@@ -693,14 +709,15 @@ Before joining QUT, I completed degrees in Human-Media Interaction and Communica
           <p class="pub-venue">Behaviour and Information Technology</p>
           <p class="pub-title">
             <a href="https://doi.org/10.1080/0144929X.2026.2614051" target="_blank" rel="noopener">
-              Applying Socio-Technical Grounded Theory to Video-Based HRI Research
+              Human-centred strategies for improving efficiency in Makoplasty surgeries
             </a>
           </p>
-          <p class="pub-authors"><strong>Jasper T. Vermeulen</strong> et al.</p>
+          <p class="pub-authors"><strong>Jasper T. Vermeulen</strong>, Glenda Caldwell, Müge Belek Fialho Teixeira, Alan Burden, James Dwyer, Matthias Guertler</p>
           <div class="pub-meta">
             <a class="pub-link" href="https://doi.org/10.1080/0144929X.2026.2614051" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> DOI</a>
           </div>
         </div>
+
         <div class="pub-badges">
           <span class="badge-year">2026</span>
         </div>
@@ -712,6 +729,7 @@ Before joining QUT, I completed degrees in Human-Media Interaction and Communica
           <p class="pub-title">Reconceptualising Human-Robot Collaboration in AEC: A PRISMA Scoping Review</p>
           <p class="pub-authors"><strong>Jasper T. Vermeulen</strong>, Rose, Caldwell, Teixeira, Liu, Hon</p>
         </div>
+
         <div class="pub-badges">
           <span class="badge-year">2026</span>
         </div>
@@ -725,27 +743,24 @@ Before joining QUT, I completed degrees in Human-Media Interaction and Communica
     </div>
   </section>
 
-<section id="awards">
+  <section id="awards">
+    <p class="section-label">Selected awards</p>
 
-  <p class="section-label">Selected awards</p>
-
-  <div class="tags">
-
-    <span class="tag">CHI 2026 Honourable Mention</span>
-    <span class="tag">DIS 2026 Honourable Mention</span>
-    <span class="tag">ACC Emerging Leader Award</span>
-    <span class="tag">Industry Research Collaboration Award</span>
-    <span class="tag">HDR Success Spotlight 2025</span>
-    <span class="tag">Best Undergraduate Thesis Nominee</span>
-
-  </div>
-
-</section>
+    <div class="tags">
+      <span class="tag">CHI 2026 Honourable Mention</span>
+      <span class="tag">DIS 2026 Honourable Mention</span>
+      <span class="tag">ACC Emerging Leader Award</span>
+      <span class="tag">Industry Research Collaboration Award</span>
+      <span class="tag">HDR Success Spotlight 2025</span>
+      <span class="tag">Best Undergraduate Thesis Nominee</span>
+    </div>
+  </section>
 
   <section id="service">
-    <p class="section-label">Service and Teaching</p>
+    <p class="section-label">Service and teaching</p>
 
-     <div class="service-item">
+    <div class="service-list">
+      <div class="service-item">
         <span class="service-year">2026-Present</span>
         <div class="service-body">
           <p class="service-title">Publication Co-Chair, OzCHI 2026</p>
@@ -753,8 +768,8 @@ Before joining QUT, I completed degrees in Human-Media Interaction and Communica
         </div>
         <span class="service-badge">Committee</span>
       </div>
- 
-    <div class="service-item">
+
+      <div class="service-item">
         <span class="service-year">2024-Present</span>
         <div class="service-body">
           <p class="service-title">Sessional Academic, QUTyou010: People With Robots</p>
@@ -762,88 +777,114 @@ Before joining QUT, I completed degrees in Human-Media Interaction and Communica
         </div>
         <span class="service-badge">Teaching</span>
       </div>
-    </div>
-    
-    <div class="service-list">
+
       <div class="service-item">
         <span class="service-year">2025-2026</span>
         <div class="service-body">
           <p class="service-title">Australian Cobotics Centre HDR Student Representative</p>
-          <p class="service-desc">Student Representative for all HDRs in the Australian Cobotics Centre across Queensland University of Technology, Swinburne University of Technology, and University of Technology Sydney.</p>
+          <p class="service-desc">Representing HDR candidates across the Australian Cobotics Centre, including QUT, Swinburne University of Technology, and University of Technology Sydney.</p>
         </div>
-        <span class="service-badge">Tutorial</span>
+        <span class="service-badge">Representative</span>
       </div>
 
-       <div class="service-list">
       <div class="service-item">
         <span class="service-year">2024-2025</span>
         <div class="service-body">
           <p class="service-title">QUT Centre for Robotics HDR Student Representative</p>
-          <p class="service-desc">Student Representative for all HDRs in the QUT Centre for Robotics.</p>
+          <p class="service-desc">Representing HDR candidates in the QUT Centre for Robotics and supporting communication between PhD researchers and centre leadership.</p>
         </div>
-        <span class="service-badge">Tutorial</span>
-      </div>     
-
-            
+        <span class="service-badge">Representative</span>
+      </div>
+    </div>
   </section>
 
   <section id="talks">
+    <p class="section-label">Selected talks</p>
 
-  <p class="section-label">Selected talks</p>
+    <div class="service-list">
+      <div class="service-item">
+        <span class="service-year">2026</span>
+        <div class="service-body">
+          <p class="service-title">Aalborg University</p>
+          <p class="service-desc">Understanding the Human(s) in Human-Robot Collaboration: A Socio-Technical Inquiry into Robot-Assisted Surgical Work</p>
+        </div>
+        <span class="service-badge">Seminar</span>
+      </div>
 
-  <div class="service-list">
+      <div class="service-item">
+        <span class="service-year">2025</span>
+        <div class="service-body">
+          <p class="service-title">Eindhoven University of Technology</p>
+          <p class="service-desc">Human-Robot Collaboration in Surgical Robotics</p>
+        </div>
+        <span class="service-badge">Invited talk</span>
+      </div>
 
-    <div class="service-item">
-      <span class="service-year">2026</span>
-      <div class="service-body">
-        <p class="service-title">
-          Aalborg University
-        </p>
-        <p class="service-desc">
-          Understanding the Human(s) in Human-Robot Collaboration: A Socio-Technical Inquiry into Robot-Assisted Surgical Work
-        </p>
+      <div class="service-item">
+        <span class="service-year">2025</span>
+        <div class="service-body">
+          <p class="service-title">Erasmus University Rotterdam</p>
+          <p class="service-desc">Industry 5.0 in Surgery?</p>
+        </div>
+        <span class="service-badge">Invited talk</span>
       </div>
     </div>
+  </section>
 
-    <div class="service-item">
-      <span class="service-year">2025</span>
-      <div class="service-body">
-        <p class="service-title">
-          Eindhoven University of Technology
-        </p>
-        <p class="service-desc">
-          Human-Robot Collaboration in Surgical Robotics
-        </p>
+  <section id="media">
+    <p class="section-label">Media</p>
+
+    <div class="service-list">
+      <div class="service-item">
+        <span class="service-year">2025</span>
+        <div class="service-body">
+          <p class="service-title">Read Them Sideways: Robotically-Assisted Surgery with Jasper Vermeulen</p>
+          <p class="service-desc">Podcast conversation on robotic surgery, human-robot collaboration, and research into surgical teamwork.</p>
+          <div class="pub-meta">
+            <a class="pub-link" href="https://open.spotify.com/episode/2vw0WNMwlLRsuHsDTnJEeV?si=f51b22dee60e45a0&nd=1&dlsi=b93c72cc80514f88" target="_blank" rel="noopener"><i class="ti ti-brand-spotify"></i> Spotify</a>
+          </div>
+        </div>
+        <span class="service-badge">Podcast</span>
+      </div>
+
+      <div class="service-item">
+        <span class="service-year">2025</span>
+        <div class="service-body">
+          <p class="service-title">Research video on robotically-assisted surgery</p>
+          <p class="service-desc">Video feature discussing human-robot collaboration and surgical robotics research.</p>
+          <div class="pub-meta">
+            <a class="pub-link" href="https://www.youtube.com/watch?v=cjol47kQMZs" target="_blank" rel="noopener"><i class="ti ti-brand-youtube"></i> YouTube</a>
+          </div>
+        </div>
+        <span class="service-badge">Video</span>
+      </div>
+
+      <div class="service-item">
+        <span class="service-year">2026</span>
+        <div class="service-body">
+          <p class="service-title">HRI Pioneers feature</p>
+          <p class="service-desc">LinkedIn feature from the HRI Pioneers community highlighting doctoral research in human-robot interaction.</p>
+          <div class="pub-meta">
+            <a class="pub-link" href="https://www.linkedin.com/posts/human-robot-interaction-pioneers_hripioneers-activity-7433632096025395200-aE4J?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC26q1MBXP84wk7RyIkZ3G9Fllw6mKIMmNk" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
+          </div>
+        </div>
+        <span class="service-badge">Feature</span>
       </div>
     </div>
-
-    <div class="service-item">
-      <span class="service-year">2025</span>
-      <div class="service-body">
-        <p class="service-title">
-          Erasmus University of Rotterdam
-        </p>
-        <p class="service-desc">
-          Industry 5.0 in Surgery?
-        </p>
-      </div>
-    </div>
-
-  </div>
-
-</section>
+  </section>
 
   <section id="affiliations">
     <p class="section-label">Affiliations</p>
 
-        <div class="affil-pill">
+    <div class="affil-row">
+      <div class="affil-pill">
         <i class="ti ti-robot" aria-hidden="true"></i>
         <a href="https://www.australiancobotics.org/person/jasper-vermeulen/" target="_blank" rel="noopener">ACC · Australian Cobotics Centre</a>
       </div>
 
       <div class="affil-pill">
         <i class="ti ti-tool" aria-hidden="true"></i>
-        <a href="https://research.qut.edu.au/carl/people/jasper-vermeulen/" target="_blank" rel="noopener">CARL · Construction and Architectural Robotics Lab</a>
+        <a href="https://research.qut.edu.au/carl/people/jasper-vermeulen/" target="_blank" rel="noopener">CARL · Research Assistant</a>
       </div>
 
       <div class="affil-pill">
@@ -851,12 +892,10 @@ Before joining QUT, I completed degrees in Human-Media Interaction and Communica
         <a href="https://research.qut.edu.au/qcr/people/jasper-vermeulen/" target="_blank" rel="noopener">QUT QCR · Centre for Robotics</a>
       </div>
 
-     <div class="affil-row">
       <div class="affil-pill">
         <i class="ti ti-building-university" aria-hidden="true"></i>
-        <a href="https://research.qut.edu.au/dmrc/people/jasper-vermeulen/" target="_blank" rel="noopener">QUT DMRC · Digital Media Research Centre </a>
+        <a href="https://research.qut.edu.au/dmrc/people/jasper-vermeulen/" target="_blank" rel="noopener">QUT DMRC · Digital Media Research Centre</a>
       </div>
-       
     </div>
   </section>
 
