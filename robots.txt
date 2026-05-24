@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jaspervermeulen1.github.io/research/sitemap.xml
