@@ -5,18 +5,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Media | Jasper T. Vermeulen</title>
-  <meta name="description" content="Media, podcasts, videos, and outreach featuring Jasper T. Vermeulen and his research on robotic surgery and HRC." />
+  <meta name="description" content="Media, podcasts, videos, and outreach related to human-robot collaboration and robotic surgery." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://jaspervermeulen1.github.io/research/media.html" />
   <meta property="og:title" content="Media | Jasper T. Vermeulen" />
-  <meta property="og:description" content="Media, podcasts, videos, and outreach featuring Jasper T. Vermeulen and his research on robotic surgery and HRC." />
+  <meta property="og:description" content="Media, podcasts, videos, and outreach related to human-robot collaboration and robotic surgery." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://jaspervermeulen1.github.io/research/media.html" />
   <meta property="og:image" content="https://jaspervermeulen1.github.io/research/Jasper_Vermeulen-5.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Media | Jasper T. Vermeulen" />
-  <meta name="twitter:description" content="Media, podcasts, videos, and outreach featuring Jasper T. Vermeulen and his research on robotic surgery and HRC." />
+  <meta name="twitter:description" content="Media, podcasts, videos, and outreach related to human-robot collaboration and robotic surgery." />
   <meta name="twitter:image" content="https://jaspervermeulen1.github.io/research/Jasper_Vermeulen-5.jpg" />
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -52,51 +53,321 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --bg: #ffffff;
+      --bg2: #f6f5f2;
+      --bg3: #f0ede8;
+      --text: #1a1916;
+      --text2: #5a5853;
+      --text3: #9b9792;
+      --border: rgba(26,25,22,0.10);
+      --border2: rgba(26,25,22,0.18);
+      --award-bg: #faeeda;
+      --award-text: #633806;
+      --max: 760px;
+      --radius: 10px;
+      --radius-sm: 6px;
+      --radius-pill: 100px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #171614;
+        --bg2: #211f1c;
+        --bg3: #2a2826;
+        --text: #f0ece6;
+        --text2: #a8a49e;
+        --text3: #6b6762;
+        --border: rgba(240,236,230,0.10);
+        --border2: rgba(240,236,230,0.18);
+        --award-bg: #3a2208;
+        --award-text: #f5c97a;
+      }
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    strong { font-weight: 500; color: var(--text); }
+    em { font-style: italic; }
+
+    .site { max-width: var(--max); margin: 0 auto; padding: 0 2rem 4rem; }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.75rem 0 1.5rem;
+      border-bottom: 0.5px solid var(--border);
+      margin-bottom: 3.5rem;
+      gap: 1rem;
+    }
+
+    .nav-name {
+      font-family: var(--serif);
+      font-size: 17px;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .nav-links { display: flex; gap: 1.25rem; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text2);
+      transition: color 0.15s;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+    .nav-links a.active { border-bottom: 1px solid var(--border2); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 170px;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 4rem;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .hero-eyebrow, .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text3);
+      margin-bottom: 0.875rem;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: 36px;
+      line-height: 1.18;
+      margin-bottom: 1.125rem;
+      color: var(--text);
+      letter-spacing: 0;
+    }
+
+    .hero-title em { font-style: italic; }
+
+    .hero-tagline, .lead {
+      font-size: 15px;
+      color: var(--text2);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-ctas, .button-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.25rem; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 15px;
+      border: 0.5px solid var(--border2);
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 400;
+      font-family: var(--sans);
+      color: var(--text2);
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+
+    .btn:hover { background: var(--bg2); color: var(--text); }
+    .btn-primary { background: var(--bg2); color: var(--text); border-color: var(--border2); }
+    .btn i { font-size: 14px; }
+
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      font-weight: 400;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      border: 0.5px solid var(--border);
+      color: var(--text3);
+    }
+
+    .avatar-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .avatar-photo {
+      width: 160px !important;
+      max-width: 160px !important;
+      height: 200px !important;
+      max-height: 200px !important;
+      border-radius: var(--radius);
+      object-fit: cover;
+      object-position: center top;
+      border: 0.5px solid var(--border);
+      display: block;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    .avatar-location { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--text3); }
+    .avatar-location i { font-size: 13px; }
+
+    section { margin-bottom: 3.5rem; padding-bottom: 3.5rem; border-bottom: 0.5px solid var(--border); }
+    section:last-of-type { border-bottom: none; }
+
+    .page-hero { padding-bottom: 2.5rem; margin-bottom: 3.25rem; }
+    .page-title {
+      font-family: var(--serif);
+      font-size: 34px;
+      line-height: 1.18;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .page-subtitle { font-size: 15px; color: var(--text2); line-height: 1.75; max-width: 680px; }
+
+    .about-text, .body-text { font-size: 15px; color: var(--text2); line-height: 1.8; }
+    .about-text + .about-text, .body-text + .body-text { margin-top: 0.875rem; }
+
+    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 1.75rem; }
+    .stat { background: var(--bg2); border-radius: var(--radius-sm); padding: 1rem 1.125rem; text-align: center; }
+    .stat-num { font-family: var(--serif); font-size: 28px; line-height: 1; color: var(--text); margin-bottom: 4px; }
+    .stat-label { font-size: 11px; color: var(--text3); font-weight: 400; }
+
+    .research-grid, .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .r-card, .card {
+      background: var(--bg2);
+      border-radius: var(--radius);
+      border: 0.5px solid var(--border);
+      padding: 1.125rem 1.25rem;
+    }
+    .r-card i, .card i { font-size: 22px; color: var(--text2); display: block; margin-bottom: 8px; }
+    .r-card-title, .card-title { font-size: 14px; font-weight: 500; margin-bottom: 5px; line-height: 1.3; color: var(--text); }
+    .r-card-desc, .card-desc { font-size: 12.5px; color: var(--text2); line-height: 1.55; }
+
+    .news-list, .service-list, .timeline-list { display: flex; flex-direction: column; gap: 0; }
+    .news-item, .service-item, .timeline-item {
+      display: flex;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      border-bottom: 0.5px solid var(--border);
+      align-items: flex-start;
+    }
+    .news-item:first-child, .service-item:first-child, .timeline-item:first-child { padding-top: 0; }
+    .news-item:last-child, .service-item:last-child, .timeline-item:last-child { border-bottom: none; }
+    .service-year, .item-year { font-size: 11px; color: var(--text3); white-space: nowrap; font-weight: 400; padding-top: 2px; min-width: 82px; }
+    .service-body, .item-body { flex: 1; }
+    .service-title, .item-title { font-size: 13.5px; font-weight: 500; color: var(--text); line-height: 1.3; margin-bottom: 2px; }
+    .service-desc, .item-desc { font-size: 12px; color: var(--text2); line-height: 1.45; }
+    .service-badge, .item-badge { font-size: 10px; padding: 2px 8px; border-radius: var(--radius-pill); background: var(--bg3); color: var(--text3); white-space: nowrap; flex-shrink: 0; }
+
+    .pub-list { display: flex; flex-direction: column; }
+    .pub-item {
+      padding: 1.125rem 0;
+      border-bottom: 0.5px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.25rem;
+      align-items: start;
+    }
+    .pub-item:first-child { padding-top: 0; }
+    .pub-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .pub-venue { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text3); margin-bottom: 4px; }
+    .pub-title { font-family: var(--serif); font-size: 15.5px; line-height: 1.35; color: var(--text); margin-bottom: 5px; }
+    .pub-title a:hover { text-decoration: underline; text-decoration-color: var(--text3); }
+    .pub-authors { font-size: 12px; color: var(--text2); line-height: 1.5; }
+    .pub-contribution { font-size: 12.5px; color: var(--text2); line-height: 1.55; margin-top: 6px; }
+    .pub-meta { margin-top: 6px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+    .pub-link { font-size: 11px; color: var(--text3); display: inline-flex; align-items: center; gap: 3px; border: 0.5px solid var(--border); padding: 2px 8px; border-radius: var(--radius-pill); transition: color 0.15s, border-color 0.15s; }
+    .pub-link:hover { color: var(--text); border-color: var(--border2); }
+    .pub-link i { font-size: 11px; }
+    .pub-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; flex-shrink: 0; padding-top: 1px; }
+    .badge { font-size: 10.5px; font-weight: 500; padding: 3px 9px; border-radius: var(--radius-pill); white-space: nowrap; }
+    .badge-award { background: var(--award-bg); color: var(--award-text); }
+    .badge-year { font-size: 11px; font-weight: 400; color: var(--text3); }
+    .pubs-more { margin-top: 1.25rem; }
+
+    .affil-row, .contact-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .affil-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 12.5px;
+      color: var(--text2);
+    }
+    .affil-pill:hover { border-color: var(--border2); color: var(--text); }
+    .affil-pill i { font-size: 14px; }
+
+    footer {
+      border-top: 0.5px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      color: var(--text3);
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 720px) {
+      .site { padding: 0 1.25rem 3rem; }
+      nav { flex-direction: column; align-items: flex-start; gap: 0.875rem; }
+      .nav-links { gap: 0.95rem; justify-content: flex-start; }
+      .hero { grid-template-columns: 1fr; gap: 2rem; }
+      .avatar-wrap { flex-direction: row; align-items: center; justify-content: flex-start; }
+      .avatar-photo { width: 80px !important; max-width: 80px !important; height: 100px !important; max-height: 100px !important; }
+      .hero-title { font-size: 28px; }
+      .page-title { font-size: 28px; }
+      .research-grid, .card-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr 1fr; }
+      .pub-item { grid-template-columns: 1fr; gap: 0.5rem; }
+      .pub-badges { flex-direction: row; align-items: center; }
+      .service-item, .news-item, .timeline-item { display: grid; grid-template-columns: 1fr; gap: 0.35rem; }
+      .service-year, .item-year { min-width: 0; }
+    }
+
+  </style>
 </head>
-<body class="">
+<body>
   <div class="site">
-    <nav class="top-nav" aria-label="Primary navigation">
+    <nav>
       <a class="nav-name" href="index.html">Jasper T. Vermeulen</a>
       <ul class="nav-links">
         <li><a href="research.html">Research</a></li>
-<li><a href="publications.html">Publications</a></li>
-<li><a href="awards.html">Awards</a></li>
-<li><a href="teaching-service.html">Teaching & Service</a></li>
-<li><a href="talks.html">Talks</a></li>
-<li><a class="active" href="media.html">Media</a></li>
-<li><a href="cv.html">CV</a></li>
-<li><a href="contact.html">Contact</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="teaching-service.html">Teaching & Service</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a class="active" href="media.html">Media</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-
     <main>
-      <section class="page-hero">
-        <div>
-          <p class="hero-eyebrow">Media</p>
-          <h1>Media and outreach</h1>
-          <p>Selected public-facing outputs, podcasts, videos, and research features.</p>
-        </div>
-      </section>
 
-      <section class="rule-section">
-        <p class="section-label">Podcast and video</p>
-        <div class="timeline">
-          <div class="timeline-item"><span class="timeline-date">2025</span><div class="timeline-body"><h3>Read Them Sideways: Robotically-Assisted Surgery with Jasper Vermeulen</h3><p>Podcast conversation on robotic surgery, human-robot collaboration, and research into surgical teamwork.</p><div class="pub-meta"><a class="pub-link" href="https://open.spotify.com/episode/2vw0WNMwlLRsuHsDTnJEeV?si=f51b22dee60e45a0&nd=1&dlsi=b93c72cc80514f88" target="_blank" rel="noopener"><i class="ti ti-brand-spotify"></i> Spotify</a></div></div></div>
-          <div class="timeline-item"><span class="timeline-date">2025</span><div class="timeline-body"><h3>Research video on robotically-assisted surgery</h3><p>Video feature discussing human-robot collaboration and surgical robotics research.</p><div class="pub-meta"><a class="pub-link" href="https://www.youtube.com/watch?v=cjol47kQMZs" target="_blank" rel="noopener"><i class="ti ti-brand-youtube"></i> YouTube</a></div></div></div>
-        </div>
-      </section>
-
-      <section>
-        <p class="section-label">Features</p>
-        <div class="timeline">
-          <div class="timeline-item"><span class="timeline-date">2026</span><div class="timeline-body"><h3>HRI Pioneers feature</h3><p>LinkedIn feature from the HRI Pioneers community highlighting doctoral research in human-robot interaction.</p><div class="pub-meta"><a class="pub-link" href="https://www.linkedin.com/posts/human-robot-interaction-pioneers_hripioneers-activity-7433632096025395200-aE4J?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC26q1MBXP84wk7RyIkZ3G9Fllw6mKIMmNk" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin"></i> LinkedIn</a></div></div></div>
-          <div class="timeline-item"><span class="timeline-date">2026</span><div class="timeline-body"><h3>Australian Cobotics Centre research feature</h3><p>Public-facing article on why human-robot collaboration takes more than two to tango, written for a broader manufacturing and robotics audience.</p></div></div>
-        </div>
-      </section>
+      <section class="page-hero"><p class="section-label">Media</p><h1 class="page-title">Media and outreach</h1><p class="page-subtitle">Podcasts, videos, and public-facing features related to my research on human-robot collaboration and robotic surgery.</p></section>
+      <section><p class="section-label">Selected media</p><div class="service-list">
+        <div class="service-item"><span class="service-year">2025</span><div class="service-body"><p class="service-title">Read Them Sideways: Robotically-Assisted Surgery with Jasper Vermeulen</p><p class="service-desc">Podcast conversation on robotic surgery, human-robot collaboration, and research into surgical teamwork.</p><div class="pub-meta"><a class="pub-link" href="https://open.spotify.com/episode/2vw0WNMwlLRsuHsDTnJEeV?si=f51b22dee60e45a0&amp;nd=1&amp;dlsi=b93c72cc80514f88" target="_blank" rel="noopener"><i class="ti ti-brand-spotify"></i> Spotify</a></div></div><span class="service-badge">Podcast</span></div>
+        <div class="service-item"><span class="service-year">2025</span><div class="service-body"><p class="service-title">Research video on robotically-assisted surgery</p><p class="service-desc">Video feature discussing human-robot collaboration and surgical robotics research.</p><div class="pub-meta"><a class="pub-link" href="https://www.youtube.com/watch?v=cjol47kQMZs" target="_blank" rel="noopener"><i class="ti ti-brand-youtube"></i> YouTube</a></div></div><span class="service-badge">Video</span></div>
+        <div class="service-item"><span class="service-year">2026</span><div class="service-body"><p class="service-title">HRI Pioneers feature</p><p class="service-desc">LinkedIn feature from the HRI Pioneers community highlighting doctoral research in human-robot interaction.</p><div class="pub-meta"><a class="pub-link" href="https://www.linkedin.com/posts/human-robot-interaction-pioneers_hripioneers-activity-7433632096025395200-aE4J?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAC26q1MBXP84wk7RyIkZ3G9Fllw6mKIMmNk" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin"></i> LinkedIn</a></div></div><span class="service-badge">Video</span></div>
+      </div></section>
 
     </main>
-
     <footer>
       <span>&copy; 2026 Jasper T. Vermeulen</span>
       <span>Brisbane, Australia · Queensland University of Technology</span>

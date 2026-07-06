@@ -1,31 +1,19 @@
-# Jasper Research Website v2
+# Jasper research site v3 compact
 
-This folder contains a multi-page version of the research website.
+This version keeps the original compact design language from the single-page site while splitting the website into separate pages.
 
-## Pages
+## Important
 
-- `index.html`
-- `research.html`
-- `publications.html`
-- `awards.html`
-- `teaching-service.html`
-- `talks.html`
-- `media.html`
-- `cv.html`
-- `contact.html`
-- `assets/css/styles.css`
+The CSS is embedded inside every HTML file. This avoids the "unstyled page" problem if an assets folder is not copied correctly.
 
-## Deployment
-
-Upload these files to the same GitHub Pages folder currently serving `https://jaspervermeulen1.github.io/research/`.
-
-Keep your existing profile image file in the same folder and named:
+Keep your profile image in the same folder as the HTML files with this exact filename:
 
 `Jasper_Vermeulen-5.jpg`
 
-The site references that file directly from the root of the `/research/` folder.
+Optional: add a CV PDF named:
 
-## Suggested next edits
+`Jasper_Vermeulen_CV.pdf`
 
-- Add a downloadable CV PDF later by uploading it and linking to it from `cv.html`.
-- Add thumbnails for each publication by replacing the icon blocks in `.pub-thumb` with images.
+## Upload
+
+Upload all HTML files, `.nojekyll`, and your profile image into your GitHub Pages `/research/` folder.

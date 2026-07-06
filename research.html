@@ -5,18 +5,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research | Jasper T. Vermeulen</title>
-  <meta name="description" content="Research on human-robot collaboration in robot-assisted surgery, multi-actor teamwork, AEC robotics, and Socio-Technical Grounded Theory." />
+  <meta name="description" content="Research programme on human-robot collaboration, robotic surgery, multi-actor HRC, and Socio-Technical Grounded Theory." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://jaspervermeulen1.github.io/research/research.html" />
   <meta property="og:title" content="Research | Jasper T. Vermeulen" />
-  <meta property="og:description" content="Research on human-robot collaboration in robot-assisted surgery, multi-actor teamwork, AEC robotics, and Socio-Technical Grounded Theory." />
+  <meta property="og:description" content="Research programme on human-robot collaboration, robotic surgery, multi-actor HRC, and Socio-Technical Grounded Theory." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://jaspervermeulen1.github.io/research/research.html" />
   <meta property="og:image" content="https://jaspervermeulen1.github.io/research/Jasper_Vermeulen-5.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Research | Jasper T. Vermeulen" />
-  <meta name="twitter:description" content="Research on human-robot collaboration in robot-assisted surgery, multi-actor teamwork, AEC robotics, and Socio-Technical Grounded Theory." />
+  <meta name="twitter:description" content="Research programme on human-robot collaboration, robotic surgery, multi-actor HRC, and Socio-Technical Grounded Theory." />
   <meta name="twitter:image" content="https://jaspervermeulen1.github.io/research/Jasper_Vermeulen-5.jpg" />
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -52,63 +53,344 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --bg: #ffffff;
+      --bg2: #f6f5f2;
+      --bg3: #f0ede8;
+      --text: #1a1916;
+      --text2: #5a5853;
+      --text3: #9b9792;
+      --border: rgba(26,25,22,0.10);
+      --border2: rgba(26,25,22,0.18);
+      --award-bg: #faeeda;
+      --award-text: #633806;
+      --max: 760px;
+      --radius: 10px;
+      --radius-sm: 6px;
+      --radius-pill: 100px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #171614;
+        --bg2: #211f1c;
+        --bg3: #2a2826;
+        --text: #f0ece6;
+        --text2: #a8a49e;
+        --text3: #6b6762;
+        --border: rgba(240,236,230,0.10);
+        --border2: rgba(240,236,230,0.18);
+        --award-bg: #3a2208;
+        --award-text: #f5c97a;
+      }
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    strong { font-weight: 500; color: var(--text); }
+    em { font-style: italic; }
+
+    .site { max-width: var(--max); margin: 0 auto; padding: 0 2rem 4rem; }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.75rem 0 1.5rem;
+      border-bottom: 0.5px solid var(--border);
+      margin-bottom: 3.5rem;
+      gap: 1rem;
+    }
+
+    .nav-name {
+      font-family: var(--serif);
+      font-size: 17px;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .nav-links { display: flex; gap: 1.25rem; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text2);
+      transition: color 0.15s;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+    .nav-links a.active { border-bottom: 1px solid var(--border2); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 170px;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 4rem;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .hero-eyebrow, .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text3);
+      margin-bottom: 0.875rem;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: 36px;
+      line-height: 1.18;
+      margin-bottom: 1.125rem;
+      color: var(--text);
+      letter-spacing: 0;
+    }
+
+    .hero-title em { font-style: italic; }
+
+    .hero-tagline, .lead {
+      font-size: 15px;
+      color: var(--text2);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-ctas, .button-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.25rem; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 15px;
+      border: 0.5px solid var(--border2);
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 400;
+      font-family: var(--sans);
+      color: var(--text2);
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+
+    .btn:hover { background: var(--bg2); color: var(--text); }
+    .btn-primary { background: var(--bg2); color: var(--text); border-color: var(--border2); }
+    .btn i { font-size: 14px; }
+
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      font-weight: 400;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      border: 0.5px solid var(--border);
+      color: var(--text3);
+    }
+
+    .avatar-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .avatar-photo {
+      width: 160px !important;
+      max-width: 160px !important;
+      height: 200px !important;
+      max-height: 200px !important;
+      border-radius: var(--radius);
+      object-fit: cover;
+      object-position: center top;
+      border: 0.5px solid var(--border);
+      display: block;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    .avatar-location { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--text3); }
+    .avatar-location i { font-size: 13px; }
+
+    section { margin-bottom: 3.5rem; padding-bottom: 3.5rem; border-bottom: 0.5px solid var(--border); }
+    section:last-of-type { border-bottom: none; }
+
+    .page-hero { padding-bottom: 2.5rem; margin-bottom: 3.25rem; }
+    .page-title {
+      font-family: var(--serif);
+      font-size: 34px;
+      line-height: 1.18;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .page-subtitle { font-size: 15px; color: var(--text2); line-height: 1.75; max-width: 680px; }
+
+    .about-text, .body-text { font-size: 15px; color: var(--text2); line-height: 1.8; }
+    .about-text + .about-text, .body-text + .body-text { margin-top: 0.875rem; }
+
+    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 1.75rem; }
+    .stat { background: var(--bg2); border-radius: var(--radius-sm); padding: 1rem 1.125rem; text-align: center; }
+    .stat-num { font-family: var(--serif); font-size: 28px; line-height: 1; color: var(--text); margin-bottom: 4px; }
+    .stat-label { font-size: 11px; color: var(--text3); font-weight: 400; }
+
+    .research-grid, .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .r-card, .card {
+      background: var(--bg2);
+      border-radius: var(--radius);
+      border: 0.5px solid var(--border);
+      padding: 1.125rem 1.25rem;
+    }
+    .r-card i, .card i { font-size: 22px; color: var(--text2); display: block; margin-bottom: 8px; }
+    .r-card-title, .card-title { font-size: 14px; font-weight: 500; margin-bottom: 5px; line-height: 1.3; color: var(--text); }
+    .r-card-desc, .card-desc { font-size: 12.5px; color: var(--text2); line-height: 1.55; }
+
+    .news-list, .service-list, .timeline-list { display: flex; flex-direction: column; gap: 0; }
+    .news-item, .service-item, .timeline-item {
+      display: flex;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      border-bottom: 0.5px solid var(--border);
+      align-items: flex-start;
+    }
+    .news-item:first-child, .service-item:first-child, .timeline-item:first-child { padding-top: 0; }
+    .news-item:last-child, .service-item:last-child, .timeline-item:last-child { border-bottom: none; }
+    .service-year, .item-year { font-size: 11px; color: var(--text3); white-space: nowrap; font-weight: 400; padding-top: 2px; min-width: 82px; }
+    .service-body, .item-body { flex: 1; }
+    .service-title, .item-title { font-size: 13.5px; font-weight: 500; color: var(--text); line-height: 1.3; margin-bottom: 2px; }
+    .service-desc, .item-desc { font-size: 12px; color: var(--text2); line-height: 1.45; }
+    .service-badge, .item-badge { font-size: 10px; padding: 2px 8px; border-radius: var(--radius-pill); background: var(--bg3); color: var(--text3); white-space: nowrap; flex-shrink: 0; }
+
+    .pub-list { display: flex; flex-direction: column; }
+    .pub-item {
+      padding: 1.125rem 0;
+      border-bottom: 0.5px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.25rem;
+      align-items: start;
+    }
+    .pub-item:first-child { padding-top: 0; }
+    .pub-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .pub-venue { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text3); margin-bottom: 4px; }
+    .pub-title { font-family: var(--serif); font-size: 15.5px; line-height: 1.35; color: var(--text); margin-bottom: 5px; }
+    .pub-title a:hover { text-decoration: underline; text-decoration-color: var(--text3); }
+    .pub-authors { font-size: 12px; color: var(--text2); line-height: 1.5; }
+    .pub-contribution { font-size: 12.5px; color: var(--text2); line-height: 1.55; margin-top: 6px; }
+    .pub-meta { margin-top: 6px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+    .pub-link { font-size: 11px; color: var(--text3); display: inline-flex; align-items: center; gap: 3px; border: 0.5px solid var(--border); padding: 2px 8px; border-radius: var(--radius-pill); transition: color 0.15s, border-color 0.15s; }
+    .pub-link:hover { color: var(--text); border-color: var(--border2); }
+    .pub-link i { font-size: 11px; }
+    .pub-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; flex-shrink: 0; padding-top: 1px; }
+    .badge { font-size: 10.5px; font-weight: 500; padding: 3px 9px; border-radius: var(--radius-pill); white-space: nowrap; }
+    .badge-award { background: var(--award-bg); color: var(--award-text); }
+    .badge-year { font-size: 11px; font-weight: 400; color: var(--text3); }
+    .pubs-more { margin-top: 1.25rem; }
+
+    .affil-row, .contact-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .affil-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 12.5px;
+      color: var(--text2);
+    }
+    .affil-pill:hover { border-color: var(--border2); color: var(--text); }
+    .affil-pill i { font-size: 14px; }
+
+    footer {
+      border-top: 0.5px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      color: var(--text3);
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 720px) {
+      .site { padding: 0 1.25rem 3rem; }
+      nav { flex-direction: column; align-items: flex-start; gap: 0.875rem; }
+      .nav-links { gap: 0.95rem; justify-content: flex-start; }
+      .hero { grid-template-columns: 1fr; gap: 2rem; }
+      .avatar-wrap { flex-direction: row; align-items: center; justify-content: flex-start; }
+      .avatar-photo { width: 80px !important; max-width: 80px !important; height: 100px !important; max-height: 100px !important; }
+      .hero-title { font-size: 28px; }
+      .page-title { font-size: 28px; }
+      .research-grid, .card-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr 1fr; }
+      .pub-item { grid-template-columns: 1fr; gap: 0.5rem; }
+      .pub-badges { flex-direction: row; align-items: center; }
+      .service-item, .news-item, .timeline-item { display: grid; grid-template-columns: 1fr; gap: 0.35rem; }
+      .service-year, .item-year { min-width: 0; }
+    }
+
+  </style>
 </head>
-<body class="">
+<body>
   <div class="site">
-    <nav class="top-nav" aria-label="Primary navigation">
+    <nav>
       <a class="nav-name" href="index.html">Jasper T. Vermeulen</a>
       <ul class="nav-links">
         <li><a class="active" href="research.html">Research</a></li>
-<li><a href="publications.html">Publications</a></li>
-<li><a href="awards.html">Awards</a></li>
-<li><a href="teaching-service.html">Teaching & Service</a></li>
-<li><a href="talks.html">Talks</a></li>
-<li><a href="media.html">Media</a></li>
-<li><a href="cv.html">CV</a></li>
-<li><a href="contact.html">Contact</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="teaching-service.html">Teaching & Service</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-
     <main>
+
       <section class="page-hero">
-        <div>
-          <p class="hero-eyebrow">Research</p>
-          <h1>Human-robot collaboration in the wild</h1>
-          <p>My research studies how robotic systems become workable through human coordination, expertise, repair, and adaptation in real organisational settings.</p>
-        </div>
+        <p class="section-label">Research</p>
+        <h1 class="page-title">Human-robot collaboration in the wild</h1>
+        <p class="page-subtitle">My research examines how robotic systems become workable in real settings, especially where collaboration depends on many people, roles, tools, spatial arrangements, and organisational routines.</p>
       </section>
-
-      <section class="rule-section">
-        <p class="section-label">Doctoral research</p>
-        <p class="body-text">My PhD examines human-robot collaboration in robot-assisted orthopaedic surgery, focusing on Mako-assisted arthroplasty. Rather than treating collaboration as a dyad between one surgeon and one robot, the research examines how surgery is coordinated across surgeons, nurses, assistants, Mako Product Specialists, instruments, displays, spatial arrangements, and institutional routines.</p>
-        <p class="body-text">The project asks how human-centred collaboration with robots is enacted in practice and how empirical insights from surgical work can inform the theorisation and design of multi-actor human-robot collaboration.</p>
-        <div class="stats">
-          <div class="stat"><div class="stat-num">12</div><div class="stat-label">Surgical videos analysed</div></div>
-          <div class="stat"><div class="stat-num">15</div><div class="stat-label">Formal surgical observations</div></div>
-          <div class="stat"><div class="stat-num">20</div><div class="stat-label">Interviews and informal expert conversations</div></div>
-        </div>
-      </section>
-
-      <section class="rule-section">
-        <p class="section-label">Research themes</p>
-        <div class="two-col">
-          <div class="card"><i class="ti ti-scalpel"></i><p class="card-title">HRC in robot-assisted surgery</p><p class="card-desc">Ethnographic research examining how surgeons, nurses, assistants, and robotic specialists coordinate robotic orthopaedic surgery in real operating theatres.</p></div>
-          <div class="card"><i class="ti ti-users-group"></i><p class="card-title">Multi-actor HRC</p><p class="card-desc">Theory and design work on collaboration around robots where multiple human roles contribute to, repair, and sustain the work.</p></div>
-          <div class="card"><i class="ti ti-eye"></i><p class="card-title">Invisible and anticipatory work</p><p class="card-desc">Studies of support, repair, translation, and anticipation that often remain invisible in technical accounts of robotic performance.</p></div>
-          <div class="card"><i class="ti ti-building-factory-2"></i><p class="card-title">AEC and construction robotics</p><p class="card-desc">Socio-technical frameworks for human-robot collaboration in construction and AEC contexts, including adoption, acceptance, and role distribution.</p></div>
-          <div class="card"><i class="ti ti-chart-dots-3"></i><p class="card-title">Socio-Technical Grounded Theory</p><p class="card-desc">Methodological development of STGT for individual qualitative analysis, video-based HRI research, and theory generation.</p></div>
-          <div class="card"><i class="ti ti-activity"></i><p class="card-title">Human factors and work systems</p><p class="card-desc">Analysis of how cognition, embodiment, spatial organisation, communication, and workload are distributed across human-robot work systems.</p></div>
-        </div>
-      </section>
-
       <section>
-        <p class="section-label">Current direction</p>
-        <p class="body-text">The next stage of this programme develops a socio-technical grounded theory of multi-actor HRC. The theory explains how collaboration with robots is held together through role distribution, delegated responsibility, invisible support work, and situated coordination across people and artefacts.</p>
+        <p class="section-label">Doctoral research programme</p>
+        <p class="body-text">My PhD investigates human-centred and multi-actor human-robot collaboration through the case of robot-assisted orthopaedic surgery. Rather than treating collaboration as a simple relationship between one human and one robot, the project examines how robotic surgery is coordinated across surgeons, nurses, assistants, Mako Product Specialists, instruments, displays, and operating theatre constraints.</p>
+        <p class="body-text">The project uses Socio-Technical Grounded Theory, combining video-based analysis, ethnographic observation, and expert interviews to develop a grounded account of how human-robot collaboration is sustained in practice.</p>
+      </section>
+      <section>
+        <p class="section-label">Research themes</p>
+        <div class="research-grid">
+          <div class="r-card"><i class="ti ti-scalpel"></i><p class="r-card-title">Robot-assisted surgery</p><p class="r-card-desc">Fieldwork in orthopaedic operating theatres, focused on coordination, expertise, spatial work, and the human labour that supports Makoplasty procedures.</p></div>
+          <div class="r-card"><i class="ti ti-users-group"></i><p class="r-card-title">Multi-actor HRC</p><p class="r-card-desc">Theory and design implications for collaboration that involves many human actors, not only a single human and robot dyad.</p></div>
+          <div class="r-card"><i class="ti ti-chart-dots-3"></i><p class="r-card-title">Socio-technical methodology</p><p class="r-card-desc">Applications of Socio-Technical Grounded Theory for qualitative HRI, video analysis, fieldwork, and theory generation.</p></div>
+          <div class="r-card"><i class="ti ti-building-factory-2"></i><p class="r-card-title">AEC robotics</p><p class="r-card-desc">Human-robot collaboration and adoption in construction and architecture, engineering, and construction contexts.</p></div>
+        </div>
+      </section>
+      <section>
+        <p class="section-label">Current thesis trajectory</p>
+        <div class="timeline-list">
+          <div class="timeline-item"><span class="item-year">Paper 1</span><div class="item-body"><p class="item-title">Human-centred HRC beyond the lab</p><p class="item-desc">A conceptual foundation for studying collaboration with robots in situated practice.</p></div></div>
+          <div class="timeline-item"><span class="item-year">Paper 2</span><div class="item-body"><p class="item-title">Video analysis of Makoplasty</p><p class="item-desc">Human-centred strategies for improving efficiency in robotic orthopaedic surgery.</p></div></div>
+          <div class="timeline-item"><span class="item-year">Paper 3</span><div class="item-body"><p class="item-title">Ethnography of robotic surgery</p><p class="item-desc">The choreography of care across surgeons, nurses, assistants, robotic specialists, instruments, and displays.</p></div></div>
+          <div class="timeline-item"><span class="item-year">Paper 4</span><div class="item-body"><p class="item-title">Invisible work of robotic surgery</p><p class="item-desc">How specialists support, shoulder, and sustain human-robot collaboration.</p></div></div>
+          <div class="timeline-item"><span class="item-year">Paper 5-6</span><div class="item-body"><p class="item-title">Multi-actor HRC and theory building</p><p class="item-desc">A broader account of how human coordination holds human-robot collaboration together in the wild.</p></div></div>
+        </div>
       </section>
 
     </main>
-
     <footer>
       <span>&copy; 2026 Jasper T. Vermeulen</span>
       <span>Brisbane, Australia · Queensland University of Technology</span>

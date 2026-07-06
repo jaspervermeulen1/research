@@ -17,6 +17,7 @@
   <meta name="twitter:title" content="Jasper T. Vermeulen | Human-Robot Collaboration Researcher" />
   <meta name="twitter:description" content="PhD candidate at QUT studying human-robot collaboration, robotic surgery, AEC robotics, ethnography, and Socio-Technical Grounded Theory." />
   <meta name="twitter:image" content="https://jaspervermeulen1.github.io/research/Jasper_Vermeulen-5.jpg" />
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -52,33 +53,321 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --bg: #ffffff;
+      --bg2: #f6f5f2;
+      --bg3: #f0ede8;
+      --text: #1a1916;
+      --text2: #5a5853;
+      --text3: #9b9792;
+      --border: rgba(26,25,22,0.10);
+      --border2: rgba(26,25,22,0.18);
+      --award-bg: #faeeda;
+      --award-text: #633806;
+      --max: 760px;
+      --radius: 10px;
+      --radius-sm: 6px;
+      --radius-pill: 100px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #171614;
+        --bg2: #211f1c;
+        --bg3: #2a2826;
+        --text: #f0ece6;
+        --text2: #a8a49e;
+        --text3: #6b6762;
+        --border: rgba(240,236,230,0.10);
+        --border2: rgba(240,236,230,0.18);
+        --award-bg: #3a2208;
+        --award-text: #f5c97a;
+      }
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    strong { font-weight: 500; color: var(--text); }
+    em { font-style: italic; }
+
+    .site { max-width: var(--max); margin: 0 auto; padding: 0 2rem 4rem; }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.75rem 0 1.5rem;
+      border-bottom: 0.5px solid var(--border);
+      margin-bottom: 3.5rem;
+      gap: 1rem;
+    }
+
+    .nav-name {
+      font-family: var(--serif);
+      font-size: 17px;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .nav-links { display: flex; gap: 1.25rem; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text2);
+      transition: color 0.15s;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+    .nav-links a.active { border-bottom: 1px solid var(--border2); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 170px;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 4rem;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .hero-eyebrow, .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text3);
+      margin-bottom: 0.875rem;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: 36px;
+      line-height: 1.18;
+      margin-bottom: 1.125rem;
+      color: var(--text);
+      letter-spacing: 0;
+    }
+
+    .hero-title em { font-style: italic; }
+
+    .hero-tagline, .lead {
+      font-size: 15px;
+      color: var(--text2);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-ctas, .button-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.25rem; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 15px;
+      border: 0.5px solid var(--border2);
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 400;
+      font-family: var(--sans);
+      color: var(--text2);
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+
+    .btn:hover { background: var(--bg2); color: var(--text); }
+    .btn-primary { background: var(--bg2); color: var(--text); border-color: var(--border2); }
+    .btn i { font-size: 14px; }
+
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      font-weight: 400;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      border: 0.5px solid var(--border);
+      color: var(--text3);
+    }
+
+    .avatar-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .avatar-photo {
+      width: 160px !important;
+      max-width: 160px !important;
+      height: 200px !important;
+      max-height: 200px !important;
+      border-radius: var(--radius);
+      object-fit: cover;
+      object-position: center top;
+      border: 0.5px solid var(--border);
+      display: block;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    .avatar-location { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--text3); }
+    .avatar-location i { font-size: 13px; }
+
+    section { margin-bottom: 3.5rem; padding-bottom: 3.5rem; border-bottom: 0.5px solid var(--border); }
+    section:last-of-type { border-bottom: none; }
+
+    .page-hero { padding-bottom: 2.5rem; margin-bottom: 3.25rem; }
+    .page-title {
+      font-family: var(--serif);
+      font-size: 34px;
+      line-height: 1.18;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .page-subtitle { font-size: 15px; color: var(--text2); line-height: 1.75; max-width: 680px; }
+
+    .about-text, .body-text { font-size: 15px; color: var(--text2); line-height: 1.8; }
+    .about-text + .about-text, .body-text + .body-text { margin-top: 0.875rem; }
+
+    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 1.75rem; }
+    .stat { background: var(--bg2); border-radius: var(--radius-sm); padding: 1rem 1.125rem; text-align: center; }
+    .stat-num { font-family: var(--serif); font-size: 28px; line-height: 1; color: var(--text); margin-bottom: 4px; }
+    .stat-label { font-size: 11px; color: var(--text3); font-weight: 400; }
+
+    .research-grid, .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .r-card, .card {
+      background: var(--bg2);
+      border-radius: var(--radius);
+      border: 0.5px solid var(--border);
+      padding: 1.125rem 1.25rem;
+    }
+    .r-card i, .card i { font-size: 22px; color: var(--text2); display: block; margin-bottom: 8px; }
+    .r-card-title, .card-title { font-size: 14px; font-weight: 500; margin-bottom: 5px; line-height: 1.3; color: var(--text); }
+    .r-card-desc, .card-desc { font-size: 12.5px; color: var(--text2); line-height: 1.55; }
+
+    .news-list, .service-list, .timeline-list { display: flex; flex-direction: column; gap: 0; }
+    .news-item, .service-item, .timeline-item {
+      display: flex;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      border-bottom: 0.5px solid var(--border);
+      align-items: flex-start;
+    }
+    .news-item:first-child, .service-item:first-child, .timeline-item:first-child { padding-top: 0; }
+    .news-item:last-child, .service-item:last-child, .timeline-item:last-child { border-bottom: none; }
+    .service-year, .item-year { font-size: 11px; color: var(--text3); white-space: nowrap; font-weight: 400; padding-top: 2px; min-width: 82px; }
+    .service-body, .item-body { flex: 1; }
+    .service-title, .item-title { font-size: 13.5px; font-weight: 500; color: var(--text); line-height: 1.3; margin-bottom: 2px; }
+    .service-desc, .item-desc { font-size: 12px; color: var(--text2); line-height: 1.45; }
+    .service-badge, .item-badge { font-size: 10px; padding: 2px 8px; border-radius: var(--radius-pill); background: var(--bg3); color: var(--text3); white-space: nowrap; flex-shrink: 0; }
+
+    .pub-list { display: flex; flex-direction: column; }
+    .pub-item {
+      padding: 1.125rem 0;
+      border-bottom: 0.5px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.25rem;
+      align-items: start;
+    }
+    .pub-item:first-child { padding-top: 0; }
+    .pub-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .pub-venue { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text3); margin-bottom: 4px; }
+    .pub-title { font-family: var(--serif); font-size: 15.5px; line-height: 1.35; color: var(--text); margin-bottom: 5px; }
+    .pub-title a:hover { text-decoration: underline; text-decoration-color: var(--text3); }
+    .pub-authors { font-size: 12px; color: var(--text2); line-height: 1.5; }
+    .pub-contribution { font-size: 12.5px; color: var(--text2); line-height: 1.55; margin-top: 6px; }
+    .pub-meta { margin-top: 6px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+    .pub-link { font-size: 11px; color: var(--text3); display: inline-flex; align-items: center; gap: 3px; border: 0.5px solid var(--border); padding: 2px 8px; border-radius: var(--radius-pill); transition: color 0.15s, border-color 0.15s; }
+    .pub-link:hover { color: var(--text); border-color: var(--border2); }
+    .pub-link i { font-size: 11px; }
+    .pub-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; flex-shrink: 0; padding-top: 1px; }
+    .badge { font-size: 10.5px; font-weight: 500; padding: 3px 9px; border-radius: var(--radius-pill); white-space: nowrap; }
+    .badge-award { background: var(--award-bg); color: var(--award-text); }
+    .badge-year { font-size: 11px; font-weight: 400; color: var(--text3); }
+    .pubs-more { margin-top: 1.25rem; }
+
+    .affil-row, .contact-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .affil-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 12.5px;
+      color: var(--text2);
+    }
+    .affil-pill:hover { border-color: var(--border2); color: var(--text); }
+    .affil-pill i { font-size: 14px; }
+
+    footer {
+      border-top: 0.5px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      color: var(--text3);
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 720px) {
+      .site { padding: 0 1.25rem 3rem; }
+      nav { flex-direction: column; align-items: flex-start; gap: 0.875rem; }
+      .nav-links { gap: 0.95rem; justify-content: flex-start; }
+      .hero { grid-template-columns: 1fr; gap: 2rem; }
+      .avatar-wrap { flex-direction: row; align-items: center; justify-content: flex-start; }
+      .avatar-photo { width: 80px !important; max-width: 80px !important; height: 100px !important; max-height: 100px !important; }
+      .hero-title { font-size: 28px; }
+      .page-title { font-size: 28px; }
+      .research-grid, .card-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr 1fr; }
+      .pub-item { grid-template-columns: 1fr; gap: 0.5rem; }
+      .pub-badges { flex-direction: row; align-items: center; }
+      .service-item, .news-item, .timeline-item { display: grid; grid-template-columns: 1fr; gap: 0.35rem; }
+      .service-year, .item-year { min-width: 0; }
+    }
+
+  </style>
 </head>
-<body class="">
+<body>
   <div class="site">
-    <nav class="top-nav" aria-label="Primary navigation">
+    <nav>
       <a class="nav-name" href="index.html">Jasper T. Vermeulen</a>
       <ul class="nav-links">
         <li><a href="research.html">Research</a></li>
-<li><a href="publications.html">Publications</a></li>
-<li><a href="awards.html">Awards</a></li>
-<li><a href="teaching-service.html">Teaching & Service</a></li>
-<li><a href="talks.html">Talks</a></li>
-<li><a href="media.html">Media</a></li>
-<li><a href="cv.html">CV</a></li>
-<li><a href="contact.html">Contact</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="teaching-service.html">Teaching & Service</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-
     <main>
+
       <section class="hero">
         <div>
           <p class="hero-eyebrow">PhD Candidate · Queensland University of Technology</p>
           <h1 class="hero-title">How do teams work <em>with</em> and <em>around</em> robots?</h1>
           <p class="hero-tagline">I study how people coordinate around robotic systems in real-world environments. Through embedded qualitative research, I investigate the gap between how human-robot collaboration is designed and how it unfolds in practice.</p>
           <div class="hero-ctas">
-            <a class="btn btn-primary" href="publications.html"><i class="ti ti-books"></i> Publications</a>
-            <a class="btn" href="research.html"><i class="ti ti-microscope"></i> Research</a>
+            <a class="btn btn-primary" href="https://scholar.google.com/citations?user=7XGYPm0AAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="ti ti-brand-google"></i> Google Scholar</a>
+            <a class="btn" href="https://www.linkedin.com/in/jaspervermeulenphdroboticssurgery/" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
             <a class="btn" href="contact.html"><i class="ti ti-mail"></i> Get in touch</a>
           </div>
           <div class="tags">
@@ -97,101 +386,78 @@
         </div>
       </section>
 
-      <section class="rule-section">
+      <section>
         <p class="section-label">About</p>
         <p class="about-text">I am a final-year PhD candidate at Queensland University of Technology and the Australian Cobotics Centre. My research examines how people work with, around, and through robotic systems in real-world settings, with a particular focus on robot-assisted orthopaedic surgery.</p>
         <p class="about-text">Through ethnographic observation, interviews, and video-based analysis, I study how robotic surgery is made workable through distributed human coordination. My work shows that human-robot collaboration is rarely a simple dyad between one human and one robot. In practice, it often depends on surgeons, nurses, assistants, robotic specialists, instruments, displays, spatial constraints, and organisational routines working together.</p>
         <p class="about-text">My doctoral research develops a socio-technical account of human-robot collaboration in the wild, contributing to HRI, HCI, CSCW, human factors, and robotics research.</p>
-      </section>
-
-      <section class="rule-section">
-        <p class="section-label">News</p>
-        <div class="news-list">
-          <div class="news-item">
-            <span class="item-date">Jul 2026</span>
-            <div><p class="item-title">Writing the final chapters of my PhD thesis</p><p class="item-desc">The thesis develops a socio-technical account of human-centred and multi-actor human-robot collaboration in robot-assisted surgery.</p></div>
-          </div>
-          <div class="news-item">
-            <span class="item-date">Jun 2026</span>
-            <div><p class="item-title">Paper accepted at ACM DIS 2026</p><p class="item-desc"><em>The Invisible Work of Robotic Surgery</em> examines how Mako Product Specialists support, shoulder, and sustain robotic surgery.</p></div>
-          </div>
-          <div class="news-item">
-            <span class="item-date">Apr 2026</span>
-            <div><p class="item-title">CHI 2026 Honourable Mention</p><p class="item-desc"><em>The Choreography of Care</em> received an Honourable Mention for its ethnographic account of collaboration in Makoplasty surgery.</p></div>
-          </div>
-          <div class="news-item">
-            <span class="item-date">Jan 2026</span>
-            <div><p class="item-title">Journal article accepted in Behaviour & Information Technology</p><p class="item-desc">The paper identifies human-centred strategies for improving efficiency in Makoplasty procedures.</p></div>
-          </div>
+        <div class="stats">
+          <div class="stat"><div class="stat-num">100+</div><div class="stat-label">Hours of fieldwork</div></div>
+          <div class="stat"><div class="stat-num">15</div><div class="stat-label">Surgical observations</div></div>
         </div>
       </section>
 
-      <section class="rule-section">
+      <section>
+        <p class="section-label">News</p>
+        <div class="news-list">
+          <div class="news-item"><span class="item-year">Jul 2026</span><div class="item-body"><p class="item-title">Writing the final chapters of my PhD thesis</p><p class="item-desc">The thesis develops a socio-technical account of human-centred and multi-actor human-robot collaboration in robot-assisted surgery.</p></div></div>
+          <div class="news-item"><span class="item-year">Jun 2026</span><div class="item-body"><p class="item-title">Paper accepted at ACM DIS 2026</p><p class="item-desc"><em>The Invisible Work of Robotic Surgery</em> examines how Mako Product Specialists support, shoulder, and sustain robotic surgery.</p></div></div>
+          <div class="news-item"><span class="item-year">Apr 2026</span><div class="item-body"><p class="item-title">CHI 2026 Honourable Mention</p><p class="item-desc"><em>The Choreography of Care</em> received an Honourable Mention for its ethnographic account of collaboration in Makoplasty surgery.</p></div></div>
+          <div class="news-item"><span class="item-year">Jan 2026</span><div class="item-body"><p class="item-title">Journal article accepted in Behaviour &amp; Information Technology</p><p class="item-desc">The paper identifies human-centred strategies for improving efficiency in Makoplasty procedures.</p></div></div>
+        </div>
+      </section>
+
+      <section>
         <p class="section-label">Selected publications</p>
         <p class="lead">My publications examine human-robot collaboration as it unfolds in real-world practice, with a focus on robot-assisted surgery, multi-actor teamwork, and the often invisible human work required to make robotic systems function safely and effectively.</p>
-        <div class="pub-grid" style="margin-top: 1.5rem;">
-        <article class="pub-card">
-          <div class="pub-thumb"><i class="ti ti-users-group" aria-hidden="true"></i></div>
+
+      <div class="pub-list">
+        <div class="pub-item">
           <div>
             <p class="pub-venue">ACM CHI 2026</p>
-            <h2 class="pub-title">The Choreography of Care: Human-Robot Collaboration in Makoplasty Surgery</h2>
+            <p class="pub-title"><a href="https://doi.org/10.1145/3772318.3791382" target="_blank" rel="noopener">The Choreography of Care: Human-Robot Collaboration in Makoplasty Surgery</a></p>
             <p class="pub-authors"><strong>Jasper T. Vermeulen</strong>, James L. Dwyer, Alan G. Burden, Glenda Amayo Caldwell, M&uuml;ge Belek Fialho Teixeira, Matthias Guertler, Ross Crawford</p>
             <p class="pub-contribution">An ethnographic study of robot-assisted orthopaedic surgery showing how collaboration with a surgical robot is coordinated across surgeons, nurses, assistants, robotic specialists, instruments, displays, and the operating theatre itself.</p>
             <div class="pub-meta"><a class="pub-link" href="https://doi.org/10.1145/3772318.3791382" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> DOI</a></div>
           </div>
-          <div class="pub-badges"><span class="badge badge-award">🏅 Honourable Mention</span><span class="badge-year">2026</span></div>
-        </article>
-        <article class="pub-card">
-          <div class="pub-thumb"><i class="ti ti-tool" aria-hidden="true"></i></div>
+          <div class="pub-badges"><span class="badge badge-award">Honourable Mention</span><span class="badge-year">2026</span></div>
+        </div>
+        <div class="pub-item">
           <div>
             <p class="pub-venue">ACM DIS 2026</p>
-            <h2 class="pub-title">The Invisible Work of Robotic Surgery</h2>
+            <p class="pub-title"><a href="https://doi.org/10.1145/3800645.3812924" target="_blank" rel="noopener">The Invisible Work of Robotic Surgery</a></p>
             <p class="pub-authors"><strong>Jasper T. Vermeulen</strong>, M&uuml;ge Belek Fialho Teixeira, Glenda Amayo Caldwell, Alan G. Burden, Matthias Guertler</p>
             <p class="pub-contribution">An interview-based study of Mako Product Specialists showing how robotic surgery depends on support, repair, translation, anticipation, and relational work that often remains invisible in formal accounts of human-robot collaboration.</p>
             <div class="pub-meta"><a class="pub-link" href="https://doi.org/10.1145/3800645.3812924" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> DOI</a></div>
           </div>
-          <div class="pub-badges"><span class="badge badge-award">🏅 Honourable Mention</span><span class="badge-year">2026</span></div>
-        </article>
-        <article class="pub-card">
-          <div class="pub-thumb"><i class="ti ti-video" aria-hidden="true"></i></div>
+          <div class="pub-badges"><span class="badge badge-award">Honourable Mention</span><span class="badge-year">2026</span></div>
+        </div>
+        <div class="pub-item">
           <div>
-            <p class="pub-venue">Behaviour & Information Technology</p>
-            <h2 class="pub-title">Human-centred strategies for improving efficiency in Makoplasty surgeries</h2>
+            <p class="pub-venue">Behaviour &amp; Information Technology</p>
+            <p class="pub-title"><a href="https://doi.org/10.1080/0144929X.2026.2614051" target="_blank" rel="noopener">Human-centred strategies for improving efficiency in Makoplasty surgeries</a></p>
             <p class="pub-authors"><strong>Jasper T. Vermeulen</strong>, Glenda Caldwell, M&uuml;ge Belek Fialho Teixeira, Alan Burden, James Dwyer, Matthias Guertler</p>
             <p class="pub-contribution">A video-based analysis of Makoplasty procedures identifying human-centred strategies for improving surgical efficiency, including role adaptability, team calibration, surgical gaze, and tool-assisted spatial coordination.</p>
             <div class="pub-meta"><a class="pub-link" href="https://doi.org/10.1080/0144929X.2026.2614051" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> DOI</a></div>
           </div>
           <div class="pub-badges"><span class="badge-year">2026</span></div>
-        </article>
         </div>
-        <div class="button-row">
-          <a class="btn" href="publications.html"><i class="ti ti-books"></i> View all publications</a>
-          <a class="btn" href="https://scholar.google.com/citations?user=7XGYPm0AAAAJ&hl=en" target="_blank" rel="noopener"><i class="ti ti-brand-google"></i> Google Scholar</a>
-        </div>
-      </section>
+      </div>
 
-      <section class="rule-section">
-        <p class="section-label">Research snapshot</p>
-        <div class="two-col">
-          <div class="card"><i class="ti ti-scalpel"></i><p class="card-title">Robot-assisted surgery</p><p class="card-desc">Fieldwork in orthopaedic operating theatres, focusing on Makoplasty procedures and the coordination work that makes robotic surgery possible.</p></div>
-          <div class="card"><i class="ti ti-users-group"></i><p class="card-title">Multi-actor HRC</p><p class="card-desc">Theory and design implications for collaboration that involves many human actors, not only a single human and robot dyad.</p></div>
-          <div class="card"><i class="ti ti-chart-dots-3"></i><p class="card-title">STGT methodology</p><p class="card-desc">Use of Socio-Technical Grounded Theory for qualitative HRI research, video analysis, and theory generation.</p></div>
-          <div class="card"><i class="ti ti-building-factory-2"></i><p class="card-title">AEC robotics</p><p class="card-desc">Research on human-robot collaboration and adoption in construction and architecture, engineering, and construction contexts.</p></div>
-        </div>
+        <div class="pubs-more"><a class="btn" href="publications.html"><i class="ti ti-books"></i> All publications</a></div>
       </section>
 
       <section>
-        <p class="section-label">Affiliations</p>
-        <div class="affil-row">
-          <a class="affil-pill" href="https://www.australiancobotics.org/person/jasper-vermeulen/" target="_blank" rel="noopener"><i class="ti ti-robot"></i> Australian Cobotics Centre</a>
-          <a class="affil-pill" href="https://research.qut.edu.au/qcr/people/jasper-vermeulen/" target="_blank" rel="noopener"><i class="ti ti-world"></i> QUT Centre for Robotics</a>
-          <a class="affil-pill" href="https://research.qut.edu.au/carl/people/jasper-vermeulen/" target="_blank" rel="noopener"><i class="ti ti-tool"></i> CARL</a>
-          <a class="affil-pill" href="https://research.qut.edu.au/dmrc/people/jasper-vermeulen/" target="_blank" rel="noopener"><i class="ti ti-building-university"></i> DMRC</a>
+        <p class="section-label">Research themes</p>
+        <div class="research-grid">
+          <div class="r-card"><i class="ti ti-scalpel" aria-hidden="true"></i><p class="r-card-title">HRC in robot-assisted surgery</p><p class="r-card-desc">Ethnographic research examining how surgeons, nurses, and robotic specialists coordinate robotic orthopaedic surgery in real operating theatres.</p></div>
+          <div class="r-card"><i class="ti ti-users-group" aria-hidden="true"></i><p class="r-card-title">Multi-actor HRC</p><p class="r-card-desc">Investigating how multiple humans collaborate around robotic systems through role typologies, coordination structures, and distributed teamwork models.</p></div>
+          <div class="r-card"><i class="ti ti-chart-dots-3" aria-hidden="true"></i><p class="r-card-title">Theory and methodology</p><p class="r-card-desc">Advancing qualitative and sociotechnical methods for HRI research, including STGT applications for individual data analysis and theory generation.</p></div>
+          <div class="r-card"><i class="ti ti-building-factory-2" aria-hidden="true"></i><p class="r-card-title">HRC in construction and AEC</p><p class="r-card-desc">Developing sociotechnical frameworks for construction human-robot collaboration, including models of robotic acceptance and adoption in AEC environments.</p></div>
         </div>
       </section>
 
     </main>
-
     <footer>
       <span>&copy; 2026 Jasper T. Vermeulen</span>
       <span>Brisbane, Australia · Queensland University of Technology</span>
