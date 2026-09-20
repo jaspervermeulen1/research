@@ -1,24 +1,19 @@
-# Jasper research site v4 - CV updated
+# Jasper Vermeulen research website
 
-This is the compact multi-page version of the site, now updated from the 2026 CV.
+Static academic website published through GitHub Pages from the root of `main`.
 
-Upload all files in this folder to the `/research/` directory of the GitHub Pages repository. Keep the profile image in the same folder as `Jasper_Vermeulen-5.jpg`.
+## Pages and styling
 
-Included pages:
+The nine profile pages share `assets/site.css`. Keep navigation order and the active-page marker consistent when adding pages. The workshop at `ozchi-2026/` has its own design.
 
-- index.html
-- research.html
-- publications.html
-- awards.html
-- teaching-service.html
-- talks.html
-- media.html
-- cv.html
-- contact.html
+## Content maintenance
 
-Included CV downloads:
+- Update homepage news in reverse chronological order.
+- Reflect talks and workshops in `talks.html`, `teaching-service.html`, and the web CV where relevant.
+- Keep publication titles, DOI links, and award names identical across pages.
+- Use the same fieldwork highlights on the homepage and web CV; avoid unverified publication totals.
+- Keep tentative dates and forthcoming activities explicitly labelled.
+- The PDF and DOCX downloads are earlier 2026 snapshots, labelled on the CV page. Replace both together when updating the downloadable CV.
+- Include new public pages in `sitemap.xml`.
 
-- Jasper_Vermeulen_CV_2026.pdf
-- Jasper_Vermeulen_CV_2026.docx
-
-The CSS is embedded in each page so the design should remain intact even without an assets folder.
+September 2026 update draws on previously supplied professional announcements and the accepted OzCHI workshop page. LinkedIn posts could not be read directly. No private career discussions are included.

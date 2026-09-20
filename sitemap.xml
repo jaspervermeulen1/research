@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://jaspervermeulen1.github.io/research/</loc>
-  </url>
+  <url><loc>https://jaspervermeulen1.github.io/research/</loc></url>
+  <url><loc>https://jaspervermeulen1.github.io/research/awards.html</loc></url>
+  <url><loc>https://jaspervermeulen1.github.io/research/contact.html</loc></url>
+  <url><loc>https://jaspervermeulen1.github.io/research/cv.html</loc></url>
+  <url><loc>https://jaspervermeulen1.github.io/research/media.html</loc></url>
+  <url><loc>https://jaspervermeulen1.github.io/research/publications.html</loc></url>
+  <url><loc>https://jaspervermeulen1.github.io/research/research.html</loc></url>
+  <url><loc>https://jaspervermeulen1.github.io/research/talks.html</loc></url>
+  <url><loc>https://jaspervermeulen1.github.io/research/teaching-service.html</loc></url>
+  <url><loc>https://jaspervermeulen1.github.io/research/ozchi-2026/</loc></url>
 </urlset>
