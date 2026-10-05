@@ -13,7 +13,7 @@ The nine profile pages share `assets/site.css`. Keep navigation order and the ac
 - Keep publication titles, DOI links, and award names identical across pages.
 - Use the same fieldwork highlights on the homepage and web CV; avoid unverified publication totals.
 - Keep tentative dates and forthcoming activities explicitly labelled.
-- The PDF and DOCX downloads are earlier 2026 snapshots, labelled on the CV page. Replace both together when updating the downloadable CV.
+- The CV is available as a webpage only. Do not add downloadable PDF or DOCX copies.
 - Include new public pages in `sitemap.xml`.
 
 September 2026 update draws on previously supplied professional announcements and the accepted OzCHI workshop page. LinkedIn posts could not be read directly. No private career discussions are included.
